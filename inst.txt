@@ -1,6 +1,6 @@
 npm install -g @angular/cli
 
-ng new --skip-tests projectName
+ng new --skip-tests (S ignore test) projectName (s ignore style)
 
 ng serve -o //start
 
