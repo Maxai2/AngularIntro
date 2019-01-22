@@ -1,0 +1,9 @@
+npm install -g @angular/cli
+
+ng new --skip-tests projectName
+
+ng serve -o //start
+
+ng g component componentName (ng g c)
+
+npm install // restore node_modules

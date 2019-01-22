@@ -1,0 +1,15 @@
+/deep/span
+{
+    cursor: pointer;
+}
+
+/deep/span:hover
+{
+    text-decoration: underline;
+}
+
+:host
+{
+    display: block;
+    background-color: aquamarine;
+}

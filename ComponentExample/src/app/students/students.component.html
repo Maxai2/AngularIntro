@@ -1,0 +1,13 @@
+<ul>
+  <!-- <li *ngFor='let s of students'>
+    <span (click)='showStudent(s)'>{{s.name}}</span>
+    <button (click)='removeStudent(s)'>x</button>
+  </li> -->
+  <app-student3 *ngFor='let s of students' [student]='s' (onShowStudent)='showStudent($event)' (onRemoveStudent)='removeStudent($event)'></app-student3>
+</ul>
+
+<app-student1 *ngIf='curStudent != undefined' [student]='curStudent'></app-student1> 
+
+<app-student2 *ngIf='curStudent != undefined'>
+  {{curStudent.id}}) {{curStudent.name}} - {{curStudent.bDay.toLocaleDateString()}}
+</app-student2>
