@@ -1,0 +1,7 @@
+div {
+    border: 1px solid gray;
+    padding: 20px 30px;
+    background: lightpink;
+    margin: 10px;
+    display: inline-block;
+}

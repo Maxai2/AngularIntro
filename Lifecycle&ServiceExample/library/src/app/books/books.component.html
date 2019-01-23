@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor='let b of books'>
+    <span (click)='showBook(b.id)'>{{b.title}}</span>
+  </li>
+</ul>
+
+<app-book *ngIf='curBook' [book]='curBook'></app-book>
