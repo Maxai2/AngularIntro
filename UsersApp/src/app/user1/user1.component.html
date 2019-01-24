@@ -1,0 +1,50 @@
+<!-- <div>
+  <label>Name: </label>
+  <input type="text" value="{{user.name}}"/> интерполяция
+  <input type="text" value="qwerty"/>
+  <input type="text" [value]="user.name"/> привязка свойств
+  <input type="text" [value]="qwerty"/>
+</div>
+<div>
+  <label>Send Mail: </label>
+  <input type="checkbox" checked="{{user.sendMail}}"/>
+  <input type="checkbox" checked="false"/>
+  <input type="checkbox" [checked]="user.sendMail"/>
+  <input type="checkbox"/>
+</div> -->
+
+<!-- <div>
+  <label>Name: </label>
+  <input type="text" [value]="user.name"/>
+</div>
+<div>
+    <label>BYear: </label>
+    <input type="number" [value]="user.bYear"/>
+</div>
+<div>
+    <label>Gender: </label>
+    <input type="checkbox" [checked]="user.gender"/>
+</div>
+<div>
+  <label>Send Mail: </label>
+  <input type="checkbox" [checked]="user.sendMail"/>
+</div> -->
+
+<div>
+  <label>Name: </label>
+  <input type="text" [(ngModel)]="user.name"/> <!-- banana in a box -->
+</div>
+<div>
+  <label>BYear: </label>
+  <input type="number" [(ngModel)]="user.bYear"/>
+</div>
+<div>
+  <label>Gender: </label>
+  <input type="checkbox" [(ngModel)]="user.gender"/>
+</div>
+<div>
+  <label>Send Mail: </label>
+  <input type="checkbox" [(ngModel)]="user.sendMail"/>
+</div>
+
+<br>

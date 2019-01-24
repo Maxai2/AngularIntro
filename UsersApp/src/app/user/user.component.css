@@ -1,0 +1,30 @@
+:host {
+    display: block;
+    border: 1px solid gray;
+    margin: 10px;
+}
+.panelhead {
+    padding: 20px 30px;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+}
+.panelbody {
+    padding: 20px 30px;
+}
+.boy.panelhead {
+    background: lightslategray;
+    color: whitesmoke;
+}
+.boy.panelbody {
+    background: lightblue;
+}
+.girl.panelhead {
+    background: palevioletred;
+    color: whitesmoke;
+}
+.girl.panelbody {
+    background: lightpink;
+}
+.hidden {
+    display: none;
+}

@@ -1,0 +1,9 @@
+<div [class.boy]='user.gender' [class.girl]='!user.gender' 
+class='panelhead' (click)='collapseToggle()'> 
+  {{user.name}}
+</div>
+<div [class.boy]='user.gender' [class.girl]='!user.gender' 
+[style.display]="collapsed ? 'none' : 'block'"
+class='panelbody'>
+  {{user.toString()}}
+</div>
