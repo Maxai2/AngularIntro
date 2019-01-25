@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../models/user';
+import { PeopleService } from '../services/people.service';
 
 @Component({
   selector: 'app-users',
@@ -8,16 +9,12 @@ import { User } from '../models/user';
 })
 export class UsersComponent implements OnInit {
 
-  users: User[] = [
-    new User(1, 'qwerty1', 1992, true, false),
-    new User(2, 'qwerty2', 1994, false, true),
-    new User(3, 'qwerty3', 1995, true, false),
-    new User(4, 'qwerty4', 1996, false, true)
-  ];
+  users: User[];
 
-  constructor() { }
+  constructor(private peopleService: PeopleService) { }
 
   ngOnInit() {
+    this.users = this.peopleService.getUsers();
   }
 
 }

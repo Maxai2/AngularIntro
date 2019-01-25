@@ -1,0 +1,38 @@
+<h4>
+  New User
+</h4>
+
+<form [formGroup]='userForm' (ngSubmit)='onSubmit()'>
+  <div class="inputGroup">
+    <label>Name: </label>
+    <input type="text" formControlName="name"> <!-- required -->
+    <span class="errors" *ngIf="name.errors && (name.touched || name.dirty)">
+      <span *ngIf="name.errors.required">name is required</span>
+      <span *ngIf="name.errors.nameRangeValidators">min 5 max 20</span>
+      <span *ngIf="name.errors.nameExists">name used</span>
+    </span>
+  </div>
+  <div class="inputGroup">
+    <label>BYear: </label>
+    <input type="number" formControlName="bYear">
+    <span class="errors" *ngIf="bYear.errors && (bYear.touched || bYear.dirty)">
+      <span *ngIf="bYear.errors.required">BYear is required</span>
+      <span *ngIf="bYear.errors.min">Min is 1900</span>
+      <span *ngIf="bYear.errors.max">Max is 2019</span>
+    </span>
+  </div>
+  <div class="inputGroup">
+    <label>Gender: </label>
+    <span>
+      <input type="radio" name="gender" formControlName="gender" [value]='true'>male
+      <input type="radio" name="gender" formControlName="gender" [value]='false'>female
+    </span>
+  </div>
+  <div class="inputGroup">
+    <label>Send Mail: </label>
+    <input type="checkbox" formControlName="sendMail">
+  </div>
+  <div class="inputSubmit">
+    <input type="submit" [disabled]='!userForm.valid'>
+  </div>
+</form>
