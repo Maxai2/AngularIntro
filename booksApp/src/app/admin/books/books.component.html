@@ -1,0 +1,12 @@
+<h4>
+  Books:
+</h4>
+
+<ul>
+  <li *ngFor='let b of books'>
+    {{b.title}} --- details:
+    <a routerLink='/admin/books/edit/{{b.id}}'>edit</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>

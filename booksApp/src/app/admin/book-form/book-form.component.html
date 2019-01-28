@@ -1,0 +1,19 @@
+<form [formGroup]='bookForm' (ngSubmit)='onSubmit()'>
+  <div class="inputgroup">
+    <label>Title: </label>
+    <input type="text" formControlName="title">
+    <span class="errors" *ngIf='title.invalid && (title.dirty || title.touched)'>
+      <span *ngIf='title.errors.required'>Title is required!</span>
+    </span>
+  </div>
+  <div class="inputgroup">
+    <label>Year: </label>
+    <input type="number" formControlName="year">
+    <span class="errors" *ngIf='year.invalid && (year.dirty || year.touched)'>
+      <span *ngIf='year.errors.required'>Year is required!</span>
+    </span>
+  </div>
+  <div class="submitgroup">
+    <input type="submit">
+  </div>
+</form>

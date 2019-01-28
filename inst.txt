@@ -9,3 +9,7 @@ ng g component componentName (ng g c)
 npm install // restore node_modules
 
 ng g service
+
+ng g m admin (moule)
+
+ng g m admin --routing

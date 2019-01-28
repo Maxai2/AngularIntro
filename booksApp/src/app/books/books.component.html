@@ -1,0 +1,19 @@
+<h4>
+  Books:
+</h4>
+
+<div>
+  <label>Year: </label>
+  <input type="number" [(ngModel)]='year'>
+  <button (click)='search()' [disabled]='!year'>Search</button>
+</div>
+
+<ul>
+  <li *ngFor='let b of books'>
+    {{b.title}} --- details:
+    <a routerLink='/books/{{b.id}}'>show</a> |
+    <a routerLink='/book/{{b.id}}'>new tab</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
