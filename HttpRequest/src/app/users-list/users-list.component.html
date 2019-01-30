@@ -1,0 +1,19 @@
+<h4>Users:</h4>
+
+<ul>
+  <li *ngFor='let u of users'>
+    {{u.id}}) {{u.name}} - {{u.email | lowercase}}
+    <button (click)='getTodos(u.id)'>todos</button>
+  </li>
+</ul>
+
+<h4>
+  Todos:
+</h4>
+
+<ul>
+  <li *ngFor='let td of todos'>
+    {{td.id}}) {{td.title}} 
+    <input type="checkbox" [checked]='td.completed' (click)='checkedChange(td)'>
+  </li>
+</ul>
