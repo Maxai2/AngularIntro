@@ -1,0 +1,12 @@
+<h2>Client Example App</h2>
+<hr>
+
+<ul>
+  <li><a routerLink='/home'>Home</a></li>
+  <li *ngIf='!isAuth'><a routerLink='/login'>Login</a></li>
+  <li *ngIf='isAuth'><a routerLink='/userPage'>User Page</a></li>
+  <li *ngIf='isAuth'><button (click)='logout()'>Logout</button></li>
+</ul>
+<hr>
+
+<router-outlet></router-outlet>
