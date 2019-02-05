@@ -13,3 +13,19 @@ ng g service
 ng g m admin (moule)
 
 ng g m admin --routing
+
+------------------------------
+
+Material
+
+npm install --save @angular/material @angular/cdk @angular/animations
+
+app.module.ts -> 
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+@NgModule({
+  ...
+  imports: [BrowserAnimationsModule],
+  ...
+})

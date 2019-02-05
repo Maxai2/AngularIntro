@@ -1,0 +1,20 @@
+<mat-selection-list #dogsList>
+  <mat-list-option *ngFor='let dog of dogs' [value]='dog.id'>
+    <div>
+      {{dog.name}}
+      <button mat-raised-button color="primary" (click)='openDialog(dog.id)'>edit</button>
+    </div>
+  </mat-list-option>
+</mat-selection-list>
+  
+<p>
+  <br>
+  Options selected: {{dogsList.selectedOptions.selected.length}}
+  <br>
+  <span *ngFor='let item of dogsList.selectedOptions.selected'>
+    {{item.value}},
+  </span>
+</p>
+
+<button mat-raised-button color="primary" (click)='openDialog()'>New Dog</button>
+  
